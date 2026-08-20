@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=DM+Mono:wght@400;500&display=swap');
+
+@theme {
+  --color-ink: #19231A;
+  --color-cream: #F4EFE6;
+  --color-copper: #B36239;
+  --color-sage: #627C65;
+  --color-clay: #8A7360;
+  --color-paper: #FAF8F5;
+  --color-moss: #2B422F;
+
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background: var(--color-copper);
+    color: var(--color-paper);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-paper);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage);
+  border-radius: 3px;
+}
+
+/* Specimen border utility */
+@utility specimen-border {
+  border: 1px solid color-mix(in srgb, var(--color-clay) 30%, transparent);
+}
+
+/* Draw animation for SVG paths */
+@keyframes draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* IntersectionObserver reveal classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-stagger.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SVG draw-on-reveal */
+.draw-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1.5s ease-out;
+}
+
+.draw-group.visible .draw-path {
+  stroke-dashoffset: 0;
+}
+
+/* Rule divider */
+.rule-divider {
+  border: none;
+  height: 1px;
+  background: color-mix(in srgb, var(--color-clay) 25%, transparent);
+}
+
+/* Specimen label */
+.specimen-label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-clay);
+}
+
+/* Modern Blob Gradients and Float Animations */
+.bg-blob {
+  filter: blur(90px);
+  opacity: 0.12;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.12; }
+  50% { transform: scale(1.15) translate(10px, -10px); opacity: 0.18; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 12s ease-in-out infinite;
+}
