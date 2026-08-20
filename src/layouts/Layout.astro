@@ -10,7 +10,10 @@ const { title } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Roots & Branches — Servicios profesionales de paisajismo, diseño y mantenimiento de jardines a medida. Creamos tu santuario verde." />
+    <meta
+      name="description"
+      content="EcoJardin — Servicios profesionales de paisajismo, diseño y mantenimiento de jardines a medida. Creamos tu santuario verde."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
@@ -25,20 +28,22 @@ const { title } = Astro.props;
               const el = entry.target as HTMLElement;
               const delay = el.dataset.delay;
               if (delay) {
-                setTimeout(() => el.classList.add('visible'), Number(delay));
+                setTimeout(() => el.classList.add("visible"), Number(delay));
               } else {
-                el.classList.add('visible');
+                el.classList.add("visible");
               }
               observer.unobserve(el);
             }
           });
         },
-        { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+        { threshold: 0.15, rootMargin: "0px 0px -40px 0px" },
       );
 
-      document.querySelectorAll('.reveal, .reveal-stagger, .draw-group').forEach((el) => {
-        observer.observe(el);
-      });
+      document
+        .querySelectorAll(".reveal, .reveal-stagger, .draw-group")
+        .forEach((el) => {
+          observer.observe(el);
+        });
     </script>
   </body>
 </html>

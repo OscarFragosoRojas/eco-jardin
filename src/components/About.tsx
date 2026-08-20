@@ -1,6 +1,6 @@
 const testimonials = [
   {
-    quote: "Roots & Branches transformó por completo mi patio trasero en un verdadero santuario. Su conocimiento botánico y de diseño es inigualable; recordaban exactamente lo que compré la primavera pasada y me asesoraron con el cuidado continuo.",
+    quote: "EcoJardín transformó por completo mi patio trasero en un verdadero santuario. Su conocimiento botánico y de diseño es inigualable; recordaban exactamente lo que compré la primavera pasada y me asesoraron con el cuidado continuo.",
     author: 'Sarah M.',
     role: 'Jardinera Aficionada',
   },
@@ -30,7 +30,7 @@ export default function About() {
               <div className="overflow-hidden rounded-[2rem]">
                 <img
                   src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80"
-                  alt="Interior de Roots & Branches — estantes de madera con macetas de terracota y plantas colgantes"
+                  alt="Interior de EcoJardín — estantes de madera con macetas de terracota y plantas colgantes"
                   className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
