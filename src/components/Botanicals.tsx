@@ -113,9 +113,124 @@ export function ScissorsSVG({ className = '' }: { className?: string }) {
       <g className="draw-group">
         <circle className="draw-path" cx="50" cy="120" r="20" stroke="currentColor" strokeWidth="1.5" />
         <circle className="draw-path" cx="110" cy="120" r="20" stroke="currentColor" strokeWidth="1.5" />
-        <path className="draw-path" d="M50 100 L80 30" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        <path className="draw-path" d="M110 100 L80 30" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        <path className="draw-path" d="M75 25 L85 35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <path className="draw-path" d="M50 100 L80 30" stroke="currentColor" strokeWidth="1.5" />
+        <path className="draw-path" d="M110 100 L80 30" stroke="currentColor" strokeWidth="1.5" />
+        <path className="draw-path" d="M75 25 L85 35" stroke="currentColor" strokeWidth="2" />
+      </g>
+    </svg>
+  );
+}
+
+export function MowerSVG({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden="true">
+      <g className="draw-group">
+        <path className="draw-path" d="M20 70 L40 70 L45 50 L75 50 L80 70" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <circle className="draw-path" cx="30" cy="75" r="10" stroke="currentColor" strokeWidth="2" />
+        <circle className="draw-path" cx="70" cy="75" r="10" stroke="currentColor" strokeWidth="2" />
+        <path className="draw-path" d="M42 58 L25 30 L15 32" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <path className="draw-path" d="M10 85 L90 85" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+        <path className="draw-path" d="M85 85 L88 78 M78 85 L81 78 M90 85 L92 80" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+      </g>
+    </svg>
+  );
+}
+
+export function PrunerSVG({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden="true">
+      <g className="draw-group">
+        <path className="draw-path" d="M35 70 L50 50 M65 70 L50 50" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+        <path className="draw-path" d="M50 50 L40 25 C43 20, 48 20, 50 30" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <path className="draw-path" d="M50 50 L60 25 C57 20, 52 20, 50 30" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <circle className="draw-path" cx="32" cy="78" r="8" stroke="currentColor" strokeWidth="2" />
+        <circle className="draw-path" cx="68" cy="78" r="8" stroke="currentColor" strokeWidth="2" />
+        <circle cx="50" cy="50" r="2.5" fill="currentColor" />
+      </g>
+    </svg>
+  );
+}
+
+export function DesignSVG({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden="true">
+      <g className="draw-group">
+        <rect className="draw-path" x="15" y="15" width="70" height="70" rx="8" stroke="currentColor" strokeWidth="2" />
+        <path className="draw-path" d="M15 38 L85 38 M15 62 L85 62 M38 15 L38 85 M62 15 L62 85" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
+        <path className="draw-path" d="M25 65 C35 55, 45 60, 55 45 C65 30, 70 35, 75 25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <path className="draw-path" d="M60 70 L75 55 M75 55 L70 50 L55 65 L60 70 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <circle className="draw-path" cx="75" cy="55" r="1.5" fill="currentColor" />
+      </g>
+    </svg>
+  );
+}
+
+export function SprinklerSVG({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden="true">
+      <g className="draw-group">
+        <path className="draw-path" d="M50 85 L50 60" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+        <rect className="draw-path" x="40" y="50" width="20" height="10" rx="2" stroke="currentColor" strokeWidth="2" />
+        <path className="draw-path" d="M50 50 C40 35, 20 30, 10 35" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="3 3" />
+        <path className="draw-path" d="M50 50 C45 30, 35 20, 25 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="3 3" />
+        <path className="draw-path" d="M50 50 C50 25, 50 15, 50 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="3 3" />
+        <path className="draw-path" d="M50 50 C55 30, 65 20, 75 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="3 3" />
+        <path className="draw-path" d="M50 50 C60 35, 80 30, 90 35" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="3 3" />
+      </g>
+    </svg>
+  );
+}
+
+export function FertilizerSVG({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden="true">
+      <g className="draw-group">
+        <path className="draw-path" d="M50 80 C30 65, 25 45, 35 30 C45 15, 50 10, 50 10 C50 10, 55 15, 65 30 C75 45, 70 65, 50 80 Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path className="draw-path" d="M50 80 L50 20" stroke="currentColor" strokeWidth="1" strokeDasharray="3 3" />
+        <path className="draw-path" d="M22 40 C22 35, 26 35, 26 40 C26 45, 22 47, 22 40 Z" stroke="currentColor" strokeWidth="1" />
+        <path className="draw-path" d="M78 40 C78 35, 74 35, 74 40 C74 45, 78 47, 78 40 Z" stroke="currentColor" strokeWidth="1" />
+        <path className="draw-path" d="M50 90 C50 85, 48 85, 48 90 C48 95, 52 95, 50 90 Z" stroke="currentColor" strokeWidth="1" />
+      </g>
+    </svg>
+  );
+}
+
+export function CleanSVG({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden="true">
+      <g className="draw-group">
+        <path className="draw-path" d="M40 85 L65 35" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+        <path className="draw-path" d="M60 30 L80 40" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <path className="draw-path" d="M62 31 L58 20 M67 33 L64 22 M72 36 L70 25 M77 38 L76 27 M82 41 L82 30" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path className="draw-path" d="M25 75 C20 75, 18 70, 23 68 C28 66, 30 70, 25 75 Z" stroke="currentColor" strokeWidth="1" />
+        <path className="draw-path" d="M35 85 C30 85, 28 80, 33 78 C38 76, 40 80, 35 85 Z" stroke="currentColor" strokeWidth="1" />
+      </g>
+    </svg>
+  );
+}
+
+export function SodSVG({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden="true">
+      <g className="draw-group">
+        <path className="draw-path" d="M20 70 C20 50, 40 45, 55 55 C70 65, 80 50, 80 40" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+        <ellipse className="draw-path" cx="20" cy="70" rx="8" ry="12" stroke="currentColor" strokeWidth="2" />
+        <path className="draw-path" d="M35 55 L37 45 M45 52 L48 44 M55 55 L58 48 M68 54 L72 45 M78 40 L81 32" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path className="draw-path" d="M10 85 L90 85" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    </svg>
+  );
+}
+
+export function PestSVG({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden="true">
+      <g className="draw-group">
+        <path className="draw-path" d="M25 20 L50 15 L75 20 C75 45, 65 75, 50 85 C35 75, 25 45, 25 20 Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <circle className="draw-path" cx="50" cy="45" r="8" stroke="currentColor" strokeWidth="1.5" />
+        <path className="draw-path" d="M50 37 L50 30" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path className="draw-path" d="M47 33 L42 27 M53 33 L58 27" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+        <path className="draw-path" d="M42 45 L35 45 M58 45 L65 45 M43 51 L36 54 M57 51 L64 54" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
       </g>
     </svg>
   );

@@ -95,7 +95,7 @@ export default function Workshops() {
                   </div>
                   <div className="text-right">
                     <span className="font-display text-xl text-copper font-bold block">{w.price}</span>
-                    <button className="font-mono text-[0.625rem] tracking-[0.15em] uppercase text-paper bg-copper px-4 py-2 mt-2 hover:bg-copper/90 transition-all duration-300 rounded-full shadow-sm shadow-copper/10 font-bold">
+                    <button className="font-mono text-[0.625rem] tracking-[0.15em] uppercase text-moss bg-copper px-4 py-2 mt-2 hover:bg-copper/90 transition-all duration-300 rounded-full shadow-sm shadow-copper/10 font-bold">
                       Reservar
                     </button>
                   </div>
@@ -119,7 +119,7 @@ export default function Workshops() {
                   placeholder="tu@email.com"
                   className="flex-1 bg-transparent px-5 py-2.5 text-ink placeholder:text-clay/50 font-mono text-sm focus:outline-none"
                 />
-                <button className="bg-copper text-paper font-mono text-xs tracking-widest uppercase px-6 py-3 hover:bg-copper/90 transition-all duration-300 flex-shrink-0 rounded-full font-bold shadow-sm shadow-copper/15">
+                <button className="bg-copper text-moss font-mono text-xs tracking-widest uppercase px-6 py-3 hover:bg-copper/90 transition-all duration-300 flex-shrink-0 rounded-full font-bold shadow-sm shadow-copper/15">
                   Suscribirse
                 </button>
               </div>

@@ -1,5 +1,5 @@
 const footerLinks = {
-  Servicios: ['Diseño Paisajista', 'Mantenimiento de Jardines', 'Sistemas de Riego', 'Muros Verdes', 'Consultoría Botánica'],
+  Servicios: ['Corte de Pasto', 'Poda de Árboles', 'Diseño y Paisajismo', 'Sistemas de Riego', 'Fertilización', 'Limpieza de Jardines', 'Instalación de Pasto', 'Control de Plagas'],
   Talleres: ['Terrarios', 'Poda Estacional', 'Compostaje Doméstico', 'Huertos Urbanos', 'Calendario Grupal'],
   Compañía: ['Nuestra Historia', 'El Equipo', 'Proyectos', 'Sostenibilidad', 'Prensa'],
   Contacto: ['Ubicación', 'Escríbenos', 'Preguntas Frecuentes', 'Soporte Técnico', 'Cotizaciones'],
@@ -17,23 +17,17 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2.5">
-              <svg className="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M32 82 C 14 74, 8 46, 22 26 C 36 6, 68 8, 83 26 C 96 42, 92 70, 78 82" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" className="text-paper/50" />
-                <path d="M58 35 L58 66 C58 74, 49 79, 42 74 C37 70, 37 64, 41 61" stroke="currentColor" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" className="text-paper/80" />
-                <path d="M58 35 C58 20, 50 14, 58 8 C66 14, 58 20, 58 35 Z" fill="currentColor" className="text-sage" />
-                <path d="M58 35 C47 24, 42 19, 47 11 C57 17, 58 28, 58 35 Z" fill="currentColor" className="text-moss" />
-                <path d="M58 35 C69 24, 74 19, 69 11 C59 17, 58 28, 58 35 Z" fill="currentColor" className="text-sage" />
-                <path d="M58 42 C45 37, 39 36, 42 28 C52 31, 55 38, 58 42 Z" fill="currentColor" className="text-moss" />
-                <path d="M58 42 C71 37, 77 36, 74 28 C64 31, 61 38, 58 42 Z" fill="currentColor" className="text-sage" />
-                <path d="M48 83 C45 80, 48 77, 51 79 C52 82, 50 84, 48 83 Z" fill="currentColor" className="text-moss" />
-                <path d="M54 83 C57 80, 54 77, 51 79 C50 82, 52 84, 54 83 Z" fill="currentColor" className="text-sage" />
-              </svg>
+              <img
+                src="/images/logo.png"
+                alt="EcoJardín Isotipo"
+                className="w-9 h-9 object-contain"
+              />
               <span className="font-display text-xl text-paper font-extrabold tracking-tight">
-                <span className="text-sage">Eco</span>Jardín
+                <span className="text-copper">Eco</span>Jardín
               </span>
             </div>
             <p className="text-cream/70 text-sm leading-relaxed mt-4 max-w-xs">
-              Diseño de paisajes, mantenimiento experto y talleres botánicos sostenibles. Transformando espacios verdes desde 2009.
+              Cuidamos • Diseñamos • Transformamos tus espacios verdes. Más verde, más vida. Desde 2009.
             </p>
           </div>
 

@@ -1,49 +1,93 @@
-import { MonsteraSVG, FiddleLeafSVG, SnakePlantSVG, BirdOfParadiseSVG } from './Botanicals';
+import { MowerSVG, PrunerSVG, DesignSVG, SprinklerSVG, FertilizerSVG, CleanSVG, SodSVG, PestSVG } from './Botanicals';
 
 const services = [
   {
     num: '001',
-    name: 'Diseño de Paisaje',
+    name: 'Corte de Pasto',
+    type: 'Mantenimiento de Césped',
+    price: 'Desde $40',
+    duration: '1-2 horas',
+    scope: 'Corte, perfilado y soplado',
+    image: 'https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?w=600&auto=format&fit=crop&q=80',
+    note: 'Mantenemos tu césped a la altura óptima con cortes limpios que favorecen su densidad y salud.',
+    Illustration: MowerSVG,
+  },
+  {
+    num: '002',
+    name: 'Poda de Árboles',
+    type: 'Cuidado de Especies',
+    price: 'Desde $90',
+    duration: '2-4 horas',
+    scope: 'Poda formativa y sanitaria',
+    image: 'https://images.unsplash.com/photo-1598902108854-10e335adac99?w=600&auto=format&fit=crop&q=80',
+    note: 'Cortes precisos y estacionales para mantener tus arbustos formados y tus árboles seguros y saludables.',
+    Illustration: PrunerSVG,
+  },
+  {
+    num: '003',
+    name: 'Diseño y Paisajismo',
     type: 'Residencial y Comercial',
-    price: 'Desde $250',
+    price: 'Desde $300',
     duration: '1-2 semanas',
     scope: 'Planos 2D/3D & especies',
     image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=600&auto=format&fit=crop&q=80',
     note: 'Conceptualizamos jardines armónicos adaptados al clima local, asoleamiento y tus preferencias estéticas.',
-    Illustration: MonsteraSVG,
-  },
-  {
-    num: '002',
-    name: 'Mantenimiento Integral',
-    type: 'Preventivo y Correctivo',
-    price: 'Desde $80/mes',
-    duration: 'Visitas programadas',
-    scope: 'Poda, nutrición y fitosanidad',
-    image: 'https://images.unsplash.com/photo-1598902108854-10e335adac99?w=600&auto=format&fit=crop&q=80',
-    note: 'Cuidado profesional estacional para mantener tu jardín limpio, saludable y libre de plagas todo el año.',
-    Illustration: FiddleLeafSVG,
-  },
-  {
-    num: '003',
-    name: 'Sistemas de Riego',
-    type: 'Inteligente y Eficiente',
-    price: 'Desde $180',
-    duration: 'Instalación en 1-2 días',
-    scope: 'Goteo y aspersión automática',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&auto=format&fit=crop&q=80',
-    note: 'Optimización de consumo de agua mediante programadores automatizados y riego localizado de precisión.',
-    Illustration: SnakePlantSVG,
+    Illustration: DesignSVG,
   },
   {
     num: '004',
-    name: 'Muros Verdes',
-    type: 'Jardinería Vertical',
-    price: 'Cotización a medida',
-    duration: 'Instalaciones personalizadas',
-    scope: 'Estructuras hidropónicas',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&auto=format&fit=crop&q=80',
-    note: 'Creación de muros e instalaciones vivas en fachadas o interiores con sistema de autorriego integrado.',
-    Illustration: BirdOfParadiseSVG,
+    name: 'Sistemas de Riego',
+    type: 'Inteligente y Eficiente',
+    price: 'Desde $180',
+    duration: '1-3 días',
+    scope: 'Goteo y aspersión automática',
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&auto=format&fit=crop&q=80',
+    note: 'Optimización de consumo de agua mediante programadores automatizados y riego localizado de precisión.',
+    Illustration: SprinklerSVG,
+  },
+  {
+    num: '005',
+    name: 'Fertilización',
+    type: 'Nutrición del Suelo',
+    price: 'Desde $50',
+    duration: '1 hora',
+    scope: 'Abono orgánico y foliar',
+    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&auto=format&fit=crop&q=80',
+    note: 'Nutrición estacional del suelo y plantas con abonos específicos para follaje y floración.',
+    Illustration: FertilizerSVG,
+  },
+  {
+    num: '006',
+    name: 'Limpieza de Jardines',
+    type: 'Saneamiento General',
+    price: 'Desde $120',
+    duration: '3-6 horas',
+    scope: 'Deshierbe y remoción',
+    image: 'https://images.unsplash.com/photo-1558905612-1f4f5f532a76?w=600&auto=format&fit=crop&q=80',
+    note: 'Limpieza profunda de hojas secas, maleza y residuos vegetales para renovar el aspecto de tu jardín.',
+    Illustration: CleanSVG,
+  },
+  {
+    num: '007',
+    name: 'Instalación de Pasto',
+    type: 'Césped en Rollo',
+    price: 'Desde $6/m²',
+    duration: '1-2 días',
+    scope: 'Preparación e instalación',
+    image: 'https://images.unsplash.com/photo-1508873696983-2df519f0397e?w=600&auto=format&fit=crop&q=80',
+    note: 'Nivelación de terreno, enmienda de tierra e instalación de césped en rollo premium de entrega inmediata.',
+    Illustration: SodSVG,
+  },
+  {
+    num: '008',
+    name: 'Control de Plagas',
+    type: 'Sanidad Vegetal',
+    price: 'Desde $70',
+    duration: '1-2 horas',
+    scope: 'Tratamiento ecológico',
+    image: 'https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?w=600&auto=format&fit=crop&q=80',
+    note: 'Identificación y control biológico/orgánico de pulgón, cochinilla y plagas comunes del jardín.',
+    Illustration: PestSVG,
   },
 ];
 
@@ -101,7 +145,7 @@ export default function FeaturedPlants() {
                   <span className="font-mono text-[0.625rem] tracking-[0.15em] uppercase text-clay">
                     Serv. {service.num}
                   </span>
-                  <span className="font-mono text-[0.625rem] tracking-[0.15em] text-copper font-bold">
+                  <span className="font-mono text-[0.625rem] tracking-[0.15em] text-moss font-bold">
                     {service.price}
                   </span>
                 </div>
@@ -130,7 +174,7 @@ export default function FeaturedPlants() {
               {/* Action button */}
               <a
                 href="#contact"
-                className="mt-6 w-full text-center font-mono text-[0.625rem] tracking-[0.15em] uppercase text-paper bg-copper py-3 hover:bg-copper/90 transition-all duration-300 opacity-100 translate-y-0 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 rounded-full block shadow-sm shadow-copper/10 font-bold"
+                className="mt-6 w-full text-center font-mono text-[0.625rem] tracking-[0.15em] uppercase text-moss bg-copper py-3 hover:bg-copper/90 transition-all duration-300 opacity-100 translate-y-0 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 rounded-full block shadow-sm shadow-copper/10 font-bold"
               >
                 Solicitar Servicio
               </a>

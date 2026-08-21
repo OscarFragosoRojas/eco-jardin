@@ -29,73 +29,17 @@ export default function Hero() {
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2.5 group">
-            <svg
-              className="w-8 h-8 transition-colors duration-300"
-              viewBox="0 0 100 100"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Circular border with a break at the bottom */}
-              <path
-                d="M32 82 C 14 74, 8 46, 22 26 C 36 6, 68 8, 83 26 C 96 42, 92 70, 78 82"
-                stroke="currentColor"
-                strokeWidth="4.5"
-                strokeLinecap="round"
-                className={scrolled || menuOpen ? 'text-moss/80' : 'text-paper/80'}
-              />
-              {/* Trunk J shape */}
-              <path
-                d="M58 35 L58 66 C58 74, 49 79, 42 74 C37 70, 37 64, 41 61"
-                stroke="currentColor"
-                strokeWidth="7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className={scrolled || menuOpen ? 'text-moss' : 'text-paper'}
-              />
-              {/* Leaves */}
-              <path
-                d="M58 35 C58 20, 50 14, 58 8 C66 14, 58 20, 58 35 Z"
-                fill="currentColor"
-                className="text-sage"
-              />
-              <path
-                d="M58 35 C47 24, 42 19, 47 11 C57 17, 58 28, 58 35 Z"
-                fill="currentColor"
-                className="text-moss"
-              />
-              <path
-                d="M58 35 C69 24, 74 19, 69 11 C59 17, 58 28, 58 35 Z"
-                fill="currentColor"
-                className="text-sage"
-              />
-              <path
-                d="M58 42 C45 37, 39 36, 42 28 C52 31, 55 38, 58 42 Z"
-                fill="currentColor"
-                className="text-moss"
-              />
-              <path
-                d="M58 42 C71 37, 77 36, 74 28 C64 31, 61 38, 58 42 Z"
-                fill="currentColor"
-                className="text-sage"
-              />
-              {/* Small accent leaves at the bottom of the circle */}
-              <path
-                d="M48 83 C45 80, 48 77, 51 79 C52 82, 50 84, 48 83 Z"
-                fill="currentColor"
-                className="text-moss"
-              />
-              <path
-                d="M54 83 C57 80, 54 77, 51 79 C50 82, 52 84, 54 83 Z"
-                fill="currentColor"
-                className="text-sage"
-              />
-            </svg>
+            <img
+              src="/images/logo.png"
+              alt="EcoJardín Isotipo"
+              className="w-9 h-9 object-contain"
+            />
             <span
               className={`font-display text-xl font-extrabold tracking-tight transition-colors ${
                 scrolled || menuOpen ? 'text-moss' : 'text-paper'
               }`}
             >
-              <span className="text-sage">Eco</span>Jardín
+              <span className="text-copper">Eco</span>Jardín
             </span>
           </a>
 
@@ -106,7 +50,7 @@ export default function Hero() {
                 href={link.href}
                 className={`font-mono text-xs tracking-widest uppercase transition-colors ${
                   scrolled || menuOpen
-                    ? 'text-ink/75 hover:text-copper'
+                    ? 'text-ink/75 hover:text-sage'
                     : 'text-paper/85 hover:text-copper'
                 }`}
               >
@@ -115,7 +59,7 @@ export default function Hero() {
             ))}
             <a
               href="#contact"
-              className="font-mono text-xs tracking-widest uppercase text-paper bg-copper px-6 py-2.5 hover:bg-copper/90 transition-colors shadow-sm shadow-copper/10 rounded-full font-bold"
+              className="font-mono text-xs tracking-widest uppercase text-moss bg-copper px-6 py-2.5 hover:bg-copper/90 transition-colors shadow-sm shadow-copper/10 rounded-full font-bold"
             >
               Contacto
             </a>
@@ -160,7 +104,7 @@ export default function Hero() {
             <a
               href="#contact"
               onClick={() => setMenuOpen(false)}
-              className="block text-center mt-4 font-mono text-sm tracking-widest uppercase text-paper bg-copper py-3 hover:bg-copper/90 transition-colors rounded-full font-bold"
+              className="block text-center mt-4 font-mono text-sm tracking-widest uppercase text-moss bg-copper py-3 hover:bg-copper/90 transition-colors rounded-full font-bold"
             >
               Contacto
             </a>
@@ -192,23 +136,23 @@ export default function Hero() {
             {/* Text Content */}
             <div className="lg:col-span-7">
               <p className="font-mono text-xs tracking-[0.2em] uppercase text-copper mb-8 reveal font-bold">
-                Est. 2009 — Paisajismo & Mantenimiento
+                Desde 2009 — Cuidamos • Diseñamos • Transformamos
               </p>
 
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7.5xl text-paper font-extrabold tracking-tight leading-[1.05] mb-8">
-                <span className="block reveal" data-delay="100">Transforma tu</span>
-                <span className="block reveal" data-delay="200">espacio exterior con</span>
-                <span className="block text-copper italic reveal" data-delay="300">paisajismo profesional</span>
+                <span className="block reveal" data-delay="100">Cuidamos,</span>
+                <span className="block reveal" data-delay="200">diseñamos y</span>
+                <span className="block text-copper italic reveal" data-delay="300">transformamos</span>
               </h1>
 
               <p className="text-paper/80 text-lg leading-relaxed max-w-md mb-10 reveal" data-delay="400">
-                Desde el diseño de jardines hasta el mantenimiento regular, creamos paisajes hermosos y funcionales que prosperan todo el año.
+                Tus espacios verdes. Creamos paisajes hermosos y funcionales que prosperan todo el año. Más verde, más vida.
               </p>
 
               <div className="flex flex-wrap gap-4 reveal" data-delay="500">
                 <a
                   href="#contact"
-                  className="group inline-flex items-center gap-3 font-mono text-xs tracking-widest uppercase text-paper bg-copper px-7 py-3.5 hover:bg-copper/90 transition-all duration-300 shadow-md shadow-copper/20 hover:shadow-lg hover:shadow-copper/30 rounded-full font-bold"
+                  className="group inline-flex items-center gap-3 font-mono text-xs tracking-widest uppercase text-moss bg-copper px-7 py-3.5 hover:bg-copper/90 transition-all duration-300 shadow-md shadow-copper/20 hover:shadow-lg hover:shadow-copper/30 rounded-full font-bold"
                 >
                   Cotización Gratis
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" className="group-hover:translate-x-0.5 transition-transform">
@@ -219,7 +163,7 @@ export default function Hero() {
                   href="#plants"
                   className="inline-flex items-center gap-3 font-mono text-xs tracking-widest uppercase text-paper/95 border border-paper/30 px-7 py-3.5 hover:text-white hover:border-copper transition-colors rounded-full font-bold"
                 >
-                  Ver Proyectos
+                  Ver Servicios
                 </a>
               </div>
 
