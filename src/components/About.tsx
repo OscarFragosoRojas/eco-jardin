@@ -1,33 +1,15 @@
-const testimonials = [
-  {
-    quote: "EcoJardín transformó por completo mi patio trasero en un verdadero santuario. Su conocimiento botánico y de diseño es inigualable; recordaban exactamente lo que compré la primavera pasada y me asesoraron con el cuidado continuo.",
-    author: 'Sarah M.',
-    role: 'Jardinera Aficionada',
-  },
-  {
-    quote: "Las tijeras de poda japonesas que compré aquí y su asesoría de diseño paisajístico son excelentes. El personal es súper atento e incluso me enseñó de forma práctica cómo afilar las herramientas para extender su vida útil.",
-    author: 'James K.',
-    role: 'Diseñador de Paisaje',
-  },
-  {
-    quote: "El taller de terrarios familiares fue lo mejor de nuestro fin de semana. Mis hijos quedaron fascinados y siguen cuidándolo cada día. Ya nos hemos registrado en tres talleres más de temporada.",
-    author: 'Elena R.',
-    role: 'Amante de la Naturaleza',
-  },
-];
-
 export default function About() {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-cream relative overflow-hidden">
+    <section id="about" className="py-10 lg:py-20 bg-cream relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/2 right-0 w-80 h-80 bg-sage/5 bg-blob animate-pulse-slow"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Story */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-5">
             <div className="specimen-border p-3.5 rounded-[2.5rem] bg-white/40 backdrop-blur-sm shadow-xl reveal">
-              <div className="overflow-hidden rounded-[2rem]">
+              <div className="overflow-hidden rounded-4xl">
                 <img
                   src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80"
                   alt="Interior de EcoJardín — estantes de madera con macetas de terracota y plantas colgantes"
@@ -71,37 +53,6 @@ export default function About() {
               </a>
             </div>
           </div>
-        </div>
-
-        <hr className="rule-divider mb-16 opacity-50" />
-
-        {/* Testimonials */}
-        <div className="text-center mb-12">
-          <p className="specimen-label mb-3 reveal">Opiniones</p>
-          <h2 className="font-display text-3xl text-moss font-extrabold tracking-tight reveal" data-delay="100">
-            Nuestra <span className="italic text-copper">comunidad</span> opina
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
-            <blockquote
-              key={t.author}
-              className="bg-white/70 backdrop-blur-sm border border-clay/10 p-8 hover:bg-white/95 hover:shadow-2xl transition-all duration-500 rounded-3xl reveal-stagger flex flex-col justify-between"
-              data-delay={String(i * 120)}
-            >
-              <p className="text-ink/75 leading-relaxed mb-8 italic text-sm">"{t.quote}"</p>
-              <footer className="flex items-center gap-3 pt-4 border-t border-clay/20">
-                <div className="w-10 h-10 bg-sage/10 rounded-full flex items-center justify-center font-bold text-sage shadow-inner flex-shrink-0">
-                  {t.author[0]}
-                </div>
-                <div>
-                  <cite className="font-display text-sm text-moss font-bold not-italic block">{t.author}</cite>
-                  <span className="font-mono text-[0.6rem] tracking-[0.1em] text-clay/80">{t.role}</span>
-                </div>
-              </footer>
-            </blockquote>
-          ))}
         </div>
       </div>
     </section>

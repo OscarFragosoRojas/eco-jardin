@@ -1,0 +1,56 @@
+---
+// TrustStrip.astro — Marquee de confianza entre CTA y Footer. Zero JS (CSS only).
+const badges = [
+  { label: "Certificado Orgánico", icon: "🌿" },
+  { label: "ISO 14001 Ambiental", icon: "♻️" },
+  { label: "+500 Proyectos", icon: "🏡" },
+  { label: "Garantía Escrita", icon: "🛡️" },
+  { label: "10 Años de Experiencia", icon: "🏆" },
+  { label: "Empresa Verde Jalisco", icon: "🌱" },
+  { label: "98% Satisfacción", icon: "⭐" },
+  { label: "Sin Costos Ocultos", icon: "✅" },
+];
+---
+
+<div class="bg-ink/95 py-4 overflow-hidden border-y border-white/5">
+  <!-- Track that scrolls infinitely with CSS animation only -->
+  <div class="marquee-track flex items-center gap-0">
+    <!-- Render twice for seamless loop -->
+    {
+      [0, 1].map(() => (
+        <div class="flex items-center gap-0 shrink-0">
+          {badges.map((b) => (
+            <div class="flex items-center gap-3 px-8 border-r border-white/10 shrink-0">
+              <span class="text-base leading-none">{b.icon}</span>
+              <span class="font-mono text-[0.6rem] tracking-[0.18em] uppercase text-white/60 whitespace-nowrap font-medium">
+                {b.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .marquee-track {
+    animation: marquee-scroll 30s linear infinite;
+    width: max-content;
+  }
+
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+</style>

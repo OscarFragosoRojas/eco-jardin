@@ -1,0 +1,101 @@
+---
+// Testimonials.astro
+const testimonials = [
+  {
+    name: 'Sofía Rodríguez',
+    role: 'Propietaria de Casa',
+    service: 'Diseño y Paisajismo',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80',
+    rating: 5,
+    text: 'Transformaron por completo nuestro patio trasero. El equipo de EcoJardín captó perfectamente nuestra idea de un jardín silvestre pero ordenado. El diseño y la iluminación de noche son espectaculares.',
+    featured: true,
+  },
+  {
+    name: 'Carlos Mendoza',
+    role: 'Administrador de Condominio',
+    service: 'Sistemas de Riego',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80',
+    rating: 5,
+    text: 'Instalaron un sistema de riego automático y el pasto en rollo. El cambio fue inmediato y el consumo de agua bajó notablemente gracias a su programación inteligente. Gran servicio post-venta.',
+    featured: false,
+  },
+  {
+    name: 'Mariana Silva',
+    role: 'Propietaria de Terraza',
+    service: 'Poda y Limpieza',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=80',
+    rating: 5,
+    text: 'Excelente servicio de poda y limpieza estacional. Son sumamente limpios, puntuales y profesionales. Se llevaron todos los residuos. 100% recomendados.',
+    featured: false,
+  },
+  {
+    name: 'Alejandro Ruiz',
+    role: 'Empresario',
+    service: 'Diseño y Paisajismo',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80',
+    rating: 5,
+    text: 'El proyecto de paisajismo para nuestras oficinas superó las expectativas. Lograron un entorno natural que inspira paz y profesionalismo. Un gran acierto trabajar con EcoJardín.',
+    featured: false,
+  },
+];
+---
+
+<section id="testimonios" class="py-24 lg:py-32 bg-paper relative overflow-hidden">
+  <!-- Decorative background elements -->
+  <div class="absolute top-10 left-10 w-96 h-96 bg-copper/5 bg-blob animate-pulse-slow pointer-events-none"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <p class="specimen-label mb-3 reveal">Testimonios</p>
+      <h2 class="font-display text-4xl sm:text-5xl text-moss font-extrabold tracking-tight reveal" data-delay="100">
+        Lo que dicen <span class="italic text-copper">nuestros clientes</span>
+      </h2>
+      <p class="text-ink/65 max-w-md mx-auto mt-4 text-sm leading-relaxed reveal" data-delay="200">
+        La confianza y satisfacción de quienes ya disfrutan de un espacio transformado por nuestro equipo.
+      </p>
+    </div>
+
+    <hr class="rule-divider mb-14 opacity-50" />
+
+    <!-- Testimonials grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {testimonials.map((t, i) => (
+        <div 
+          class={`reveal-stagger bg-cream/50 backdrop-blur-sm border border-clay/10 p-7 rounded-3xl flex flex-col justify-between hover:border-copper/40 transition-all duration-300 hover:shadow-lg ${t.featured ? 'lg:col-span-2 bg-linear-to-br from-cream/60 to-white/90' : ''}`}
+          data-delay={String(i * 120)}
+        >
+          <div>
+            <!-- Rating -->
+            <div class="flex gap-1 mb-4">
+              {Array.from({ length: t.rating }).map(() => (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8BC34A" stroke-width="2" class="fill-copper">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              ))}
+            </div>
+
+            <!-- Review text -->
+            <blockquote class={`text-ink/80 leading-relaxed mb-6 font-display font-medium ${t.featured ? 'text-lg lg:text-xl' : 'text-sm'}`}>
+              "{t.text}"
+            </blockquote>
+          </div>
+
+          <!-- User info -->
+          <div class="flex items-center justify-between border-t border-clay/10 pt-4">
+            <div class="flex items-center gap-3">
+              <img src={t.avatar} alt={t.name} class="w-10 h-10 rounded-full object-cover border border-clay/20" />
+              <div>
+                <cite class="font-display text-sm font-bold text-moss not-italic block">{t.name}</cite>
+                <span class="font-mono text-[0.6rem] text-clay/70 uppercase block">{t.role}</span>
+              </div>
+            </div>
+            <span class="font-mono text-[0.55rem] tracking-widest uppercase bg-moss/10 text-moss px-2.5 py-1 rounded-full border border-moss/10 font-semibold">
+              {t.service}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

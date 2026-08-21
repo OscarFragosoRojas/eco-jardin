@@ -146,3 +146,31 @@
 .animate-pulse-slow {
   animation: pulse-slow 12s ease-in-out infinite;
 }
+
+/* Flip Card */
+.flip-card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Line clamp utility */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

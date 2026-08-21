@@ -7,7 +7,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-moss text-paper border-t border-sage/10 mt-16 relative overflow-hidden">
+    <footer id="contact" className="bg-moss text-paper border-t border-sage/10 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-copper/5 bg-blob animate-pulse-slow"></div>
 
@@ -53,7 +53,7 @@ export default function Footer() {
         {/* Visit card */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="flex items-start gap-4">
-            <div className="w-8 h-8 bg-paper/5 rounded-full flex items-center justify-center text-copper flex-shrink-0 mt-0.5">
+            <div className="w-8 h-8 bg-paper/5 rounded-full flex items-center justify-center text-copper shrink-0 mt-0.5">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2">
                 <path d="M8 1C5.2 1 3 3.2 3 6c0 4 5 9 5 9s5-5 5-9c0-2.8-2.2-5-5-5z" />
                 <circle cx="8" cy="6" r="2" />
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
 
           <div className="flex items-start gap-4">
-            <div className="w-8 h-8 bg-paper/5 rounded-full flex items-center justify-center text-copper flex-shrink-0 mt-0.5">
+            <div className="w-8 h-8 bg-paper/5 rounded-full flex items-center justify-center text-copper shrink-0 mt-0.5">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2">
                 <circle cx="8" cy="8" r="7" />
                 <path d="M8 4v4l3 3" />
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
 
           <div className="flex items-start gap-4">
-            <div className="w-8 h-8 bg-paper/5 rounded-full flex items-center justify-center text-copper flex-shrink-0 mt-0.5">
+            <div className="w-8 h-8 bg-paper/5 rounded-full flex items-center justify-center text-copper shrink-0 mt-0.5">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2">
                 <rect x="1" y="3" width="14" height="10" rx="1" />
                 <path d="M1 3l7 5 7-5" />
@@ -96,10 +96,10 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="font-mono text-[0.6rem] tracking-[0.1em] text-paper/40">&copy; 2026 EcoJardín</span>
+          <span className="font-mono text-[0.6rem] tracking-widest text-paper/40">&copy; 2026 EcoJardín</span>
           <div className="flex gap-6">
             {['Privacidad', 'Términos', 'Cookies'].map((link) => (
-              <a key={link} href="#contact" className="font-mono text-[0.6rem] tracking-[0.1em] text-paper/40 hover:text-paper transition-colors">{link}</a>
+              <a key={link} href="#contact" className="font-mono text-[0.6rem] tracking-widest text-paper/40 hover:text-paper transition-colors">{link}</a>
             ))}
           </div>
         </div>

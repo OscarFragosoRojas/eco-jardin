@@ -1,0 +1,276 @@
+---
+// CTA.astro — Rediseño premium: layout dividido con imagen real + card de acción
+---
+
+<section class="py-24 lg:py-32 bg-cream relative overflow-hidden">
+  <!-- Fondo decorativo superior -->
+  <div
+    class="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-sage/20 to-transparent"
+  >
+  </div>
+
+  <!-- Blob decorativo -->
+  <div
+    class="absolute -left-32 top-1/2 -translate-y-1/2 w-96 h-96 bg-sage/8 bg-blob animate-pulse-slow pointer-events-none"
+  >
+  </div>
+  <div
+    class="absolute -right-20 bottom-0 w-72 h-72 bg-copper/6 bg-blob animate-float pointer-events-none"
+  >
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <!-- Grid principal: imagen + contenido -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Columna izquierda: imagen con overlays -->
+      <div class="relative reveal">
+        <!-- Imagen principal con bordes redondeados y sombra profunda -->
+        <div
+          class="relative rounded-3xl overflow-hidden shadow-2xl shadow-moss/20 aspect-4/5 lg:aspect-3/4"
+        >
+          <img
+            src="/images/cta-consultation.jpg"
+            alt="Consulta de diseño de jardín con especialista EcoJardín"
+            class="w-full h-full object-cover"
+          />
+          <!-- Overlay gradiente inferior para legibilidad -->
+          <div
+            class="absolute inset-0 bg-linear-to-t from-moss/80 via-moss/10 to-transparent"
+          >
+          </div>
+
+          <!-- Badge flotante inferior izquierdo -->
+          <div
+            class="absolute bottom-5 left-5 bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-3 flex items-center gap-3"
+          >
+            <div
+              class="w-9 h-9 bg-copper rounded-xl flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <p
+                class="font-display text-white font-bold text-sm leading-tight"
+              >
+                Plan a tu medida
+              </p>
+              <p
+                class="font-mono text-white/60 text-[0.55rem] tracking-wide uppercase"
+              >
+                Diagnóstico Gratuito
+              </p>
+            </div>
+          </div>
+
+          <!-- Badge flotante superior derecho: estrellas -->
+          <div
+            class="absolute top-5 right-5 bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-2.5 flex items-center gap-2"
+          >
+            <div class="flex gap-0.5">
+              {
+                [1, 2, 3, 4, 5].map(() => (
+                  <svg
+                    width="10"
+                    height="10"
+                    viewBox="0 0 24 24"
+                    fill="#F5A623"
+                    stroke="none"
+                  >
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                ))
+              }
+            </div>
+            <span
+              class="font-mono text-white text-[0.6rem] font-bold tracking-wide"
+              >4.9 · 200+ reseñas</span
+            >
+          </div>
+        </div>
+
+        <!-- Tarjeta flotante fuera de la imagen: estadística destacada -->
+        <div
+          class="absolute -bottom-6 -right-4 lg:-right-8 bg-white border border-clay/10 rounded-2xl shadow-xl shadow-moss/10 px-5 py-4 flex items-center gap-4"
+        >
+          <div
+            class="w-11 h-11 bg-moss/8 rounded-xl flex items-center justify-center"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#1E4D2B"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <p
+              class="font-display text-moss font-extrabold text-lg leading-none"
+            >
+              10 años
+            </p>
+            <p
+              class="font-mono text-clay/70 text-[0.58rem] tracking-wider uppercase mt-0.5"
+            >
+              de experiencia en GDL
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha: contenido de acción -->
+      <div class="lg:pl-4 space-y-8">
+        <!-- Eyebrow label -->
+        <div class="reveal" data-delay="100">
+          <span
+            class="inline-flex items-center gap-2 font-mono text-[0.6rem] tracking-[0.2em] uppercase text-moss bg-sage/10 border border-sage/20 px-4 py-1.5 rounded-full"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-copper animate-pulse inline-block"
+            ></span>
+            Consulta Gratuita
+          </span>
+        </div>
+
+        <!-- Headline -->
+        <div class="reveal" data-delay="150">
+          <h2
+            class="font-display text-4xl sm:text-5xl text-ink font-extrabold tracking-tight leading-[1.1]"
+          >
+            Tu jardín ideal<br />
+            <span class="text-moss">empieza con una</span><br />
+            <span class="italic text-copper">conversación</span>
+          </h2>
+          <p
+            class="text-clay/80 text-sm lg:text-base leading-relaxed mt-5 max-w-md"
+          >
+            Agenda tu visita técnica sin costo. Un especialista irá a tu
+            espacio, escuchará tus ideas y te entregará un plan personalizado
+            sin compromisos.
+          </p>
+        </div>
+
+        <!-- Lista de beneficios -->
+        <ul class="space-y-3 reveal" data-delay="200">
+          {
+            [
+              {
+                text: "Visita técnica gratuita en tu domicilio",
+                icon: "M5 13l4 4L19 7",
+              },
+              {
+                text: "Diagnóstico profesional del espacio",
+                icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+              },
+              {
+                text: "Presupuesto detallado sin letra pequeña",
+                icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+              },
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-sage/15 border border-sage/30 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg
+                    width="10"
+                    height="10"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2E7D32"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d={item.icon} />
+                  </svg>
+                </div>
+                <span class="text-clay/80 text-sm">{item.text}</span>
+              </li>
+            ))
+          }
+        </ul>
+
+        <!-- Botones CTA -->
+        <div class="flex flex-col sm:flex-row gap-3 reveal" data-delay="300">
+          <a
+            href="#contacto"
+            class="group relative inline-flex items-center justify-center gap-2.5 font-mono text-xs tracking-[0.15em] uppercase text-paper bg-moss px-8 py-4 rounded-full font-bold shadow-lg shadow-moss/25 hover:shadow-moss/40 hover:scale-[1.03] active:scale-95 transition-all duration-300 overflow-hidden"
+          >
+            <!-- Shimmer effect -->
+            <span
+              class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-linear-to-r from-transparent via-white/10 to-transparent"
+            ></span>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"
+              ></rect><line x1="16" y1="2" x2="16" y2="6"></line><line
+                x1="8"
+                y1="2"
+                x2="8"
+                y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Agendar Visita Gratis
+          </a>
+          <a
+            href="tel:+523300000000"
+            class="inline-flex items-center justify-center gap-2.5 font-mono text-xs tracking-[0.15em] uppercase text-moss bg-transparent border-2 border-moss/30 px-7 py-4 rounded-full font-bold hover:border-moss hover:bg-moss/5 transition-all duration-300"
+          >
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.56 11.5 19.79 19.79 0 011.5 2.89 2 2 0 013.49 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.67a16 16 0 006.29 6.29l1.33-1.33a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+              ></path>
+            </svg>
+            Llamar Ahora
+          </a>
+        </div>
+
+        <!-- Garantía micro-texto -->
+        <p
+          class="font-mono text-[0.55rem] text-clay/50 tracking-widest uppercase reveal"
+          data-delay="400"
+        >
+          ✓ Sin compromiso &nbsp;•&nbsp; ✓ Garantía escrita &nbsp;•&nbsp; ✓
+          Respuesta en 24h
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fondo decorativo inferior -->
+  <div
+    class="absolute bottom-0 inset-x-0 h-px bg-linear-to-r from-transparent via-sage/20 to-transparent"
+  >
+  </div>
+</section>

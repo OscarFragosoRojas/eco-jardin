@@ -1,0 +1,143 @@
+---
+// Process.astro — Static, Zero JS
+import {
+  IconPhoneCall,
+  IconClipboardText,
+  IconHammer,
+  IconShieldCheck,
+} from "@tabler/icons-react";
+---
+
+<section id="proceso" class="py-24 lg:py-32 bg-cream relative overflow-hidden">
+  <!-- Blobs -->
+  <div
+    class="absolute top-10 right-1/3 w-80 h-80 bg-sage/5 bg-blob animate-pulse-slow pointer-events-none"
+  >
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <p class="specimen-label mb-3 reveal">Así trabajamos</p>
+      <h2
+        class="font-display text-4xl sm:text-5xl text-moss font-extrabold tracking-tight reveal"
+        data-delay="100"
+      >
+        Simple, claro <span class="italic text-copper">y sin sorpresas</span>
+      </h2>
+      <p
+        class="text-ink/65 max-w-md mx-auto mt-4 text-sm leading-relaxed reveal"
+        data-delay="200"
+      >
+        Desde la primera llamada hasta el jardín terminado. Cuatro pasos para
+        transformar tu espacio.
+      </p>
+    </div>
+
+    <hr class="rule-divider mb-14 opacity-50" />
+
+    <!-- Steps grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+      <!-- Connector line (desktop only) -->
+      <div
+        class="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-linear-to-r from-transparent via-clay/20 to-transparent z-0"
+      >
+      </div>
+
+      <!-- Step 1 -->
+      <div class="reveal-stagger group relative z-10" data-delay="0">
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-20 h-20 bg-moss rounded-3xl flex items-center justify-center mb-5 shadow-lg shadow-moss/20 group-hover:scale-105 transition-transform duration-300"
+          >
+            <IconPhoneCall className="w-8 h-8 text-white stroke-[1.5]" />
+          </div>
+          <span
+            class="font-mono text-[0.55rem] tracking-[0.2em] uppercase text-copper mb-2"
+            >Paso 01</span
+          >
+          <h3 class="font-display text-lg text-moss font-bold mb-2">
+            Consulta gratuita
+          </h3>
+          <p class="text-ink/60 text-xs leading-relaxed">
+            Nos visitas o te visitamos. Evaluamos el espacio y escuchamos tus
+            ideas sin costo ni compromiso.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="reveal-stagger group relative z-10" data-delay="120">
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-20 h-20 bg-white border-2 border-clay/15 rounded-3xl flex items-center justify-center mb-5 shadow-md group-hover:border-copper/40 group-hover:scale-105 transition-all duration-300"
+          >
+            <IconClipboardText className="w-8 h-8 text-moss stroke-[1.5]" />
+          </div>
+          <span
+            class="font-mono text-[0.55rem] tracking-[0.2em] uppercase text-copper mb-2"
+            >Paso 02</span
+          >
+          <h3 class="font-display text-lg text-moss font-bold mb-2">
+            Diseño y propuesta
+          </h3>
+          <p class="text-ink/60 text-xs leading-relaxed">
+            Elaboramos un plan detallado con presupuesto transparente. Sin
+            letras pequeñas ni costos ocultos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="reveal-stagger group relative z-10" data-delay="240">
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-20 h-20 bg-white border-2 border-clay/15 rounded-3xl flex items-center justify-center mb-5 shadow-md group-hover:border-copper/40 group-hover:scale-105 transition-all duration-300"
+          >
+            <IconHammer className="w-8 h-8 text-moss stroke-[1.5]" />
+          </div>
+          <span
+            class="font-mono text-[0.55rem] tracking-[0.2em] uppercase text-copper mb-2"
+            >Paso 03</span
+          >
+          <h3 class="font-display text-lg text-moss font-bold mb-2">
+            Ejecución profesional
+          </h3>
+          <p class="text-ink/60 text-xs leading-relaxed">
+            Nuestro equipo trabaja con puntualidad y cuidado. Te mantenemos
+            informado en cada etapa del proyecto.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="reveal-stagger group relative z-10" data-delay="360">
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-20 h-20 bg-white border-2 border-clay/15 rounded-3xl flex items-center justify-center mb-5 shadow-md group-hover:border-copper/40 group-hover:scale-105 transition-all duration-300"
+          >
+            <IconShieldCheck className="w-8 h-8 text-moss stroke-[1.5]" />
+          </div>
+          <span
+            class="font-mono text-[0.55rem] tracking-[0.2em] uppercase text-copper mb-2"
+            >Paso 04</span
+          >
+          <h3 class="font-display text-lg text-moss font-bold mb-2">
+            Seguimiento y garantía
+          </h3>
+          <p class="text-ink/60 text-xs leading-relaxed">
+            Revisamos el resultado contigo. Garantizamos la calidad de cada
+            trabajo y resolvemos cualquier detalle.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA strip -->
+    <div class="mt-16 text-center reveal" data-delay="400">
+      <p class="text-ink/50 text-xs font-mono tracking-wide mb-4 uppercase">
+        ✦ Todo incluido en el presupuesto • Sin sorpresas • Garantía escrita
+      </p>
+    </div>
+  </div>
+</section>

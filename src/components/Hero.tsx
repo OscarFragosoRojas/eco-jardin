@@ -124,7 +124,7 @@ export default function Hero() {
 
         {/* Dark Tint & Gradient Overlays for readability */}
         <div className="absolute inset-0 bg-ink/40 lg:bg-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/90 via-ink/85 to-ink/90 lg:bg-gradient-to-r lg:from-ink/98 lg:via-ink/75 lg:to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-ink/90 via-ink/85 to-ink/90 lg:bg-linear-to-r lg:from-ink/98 lg:via-ink/75 lg:to-transparent" />
 
         {/* Subtle texture overlay */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
@@ -190,7 +190,7 @@ export default function Hero() {
         {/* Scroll line */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 reveal" data-delay="900">
           <span className="font-mono text-[0.625rem] tracking-[0.2em] uppercase text-cream/55">Explorar</span>
-          <div className="w-px h-8 bg-gradient-to-b from-cream/45 to-transparent"></div>
+          <div className="w-px h-8 bg-linear-to-b from-cream/45 to-transparent"></div>
         </div>
       </section>
     </>
